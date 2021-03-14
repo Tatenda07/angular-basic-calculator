@@ -1,0 +1,62 @@
+<div class="calc">
+  <div class="header">
+      <div class="titles">
+          Simple Calculator
+      </div>
+  </div>
+  <div class="display">
+      <div class="display-indicate">
+          max
+      </div>
+      <div class="display-main">
+          {{ result }}
+      </div>
+
+      <div class="display-operations">
+          {{ input }}
+          <!--input class="input-display" placeholder="0" type="text" name="input" id="input" (input)="input=$event.target.value"-->
+      </div>
+  </div>
+
+  <div class="row">
+      <button class="button ac" (click)="allClear()">ac</button>
+      <button class="button ce" (click)="clear()">ce</button>
+      <button class="button div" (click)="pressOperator('/')"><i> &divide;</i></button>
+      <button class="button mult" (click)="pressOperator('*')">x</button>
+  </div>
+
+  <div class="row">
+      <button class="button seven" (click)="pressNum('7')">7</button>
+      <button class="button eight" (click)="pressNum('8')">8</button>
+      <button class="button nine" (click)="pressNum('9')">9</button>
+      <button class="button minus" (click)="pressOperator('-')">−</button>
+  </div>
+
+  <div class="row">
+      <button class="button four" (click)="pressNum('4')">4</button>
+      <button class="button five" (click)="pressNum('5')">5</button>
+      <button class="button six" (click)="pressNum('6')">6</button>
+      <button class="button plus" (click)="pressOperator('+')">+</button>
+  </div>
+
+  <div class="bottom-row">
+      <div class="left">
+          <div class="row">
+              <button class="button one" (click)="pressNum('1')">1</button>
+              <button class="button two" (click)="pressNum('2')">2</button>
+              <button class="button three" (click)="pressNum('3')">3</button>
+          </div>
+
+          <div class="row">
+              <button class="button zero" (click)="pressNum('0')">0</button>
+              <button class="button dot" (click)="pressNum('.')">.</button>
+          </div>
+      </div>
+
+      <div class="right">
+          <div class="button eq" (click)="getAnswer()">=</div>
+      </div>
+
+  </div>
+
+</div>
